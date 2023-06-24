@@ -1,0 +1,20 @@
+Use the extract bus logging function: https://asammdf.readthedocs.io/en/master/api.html#asammdf.mdf.MDF.extract_bus_logging
+
+pass in the location of the DBC file
+
+store DBC file in repo
+
+Read the config file and use the value in there (the VIN) to rename the files
+
+If the config name contains a VIN, use pyvin to decode it
+
+-------
+
+These are the columns of the MF4 file: Index(['CAN_DataFrame.CAN_DataFrame.BusChannel',
+       'CAN_DataFrame.CAN_DataFrame.ID', 'CAN_DataFrame.CAN_DataFrame.IDE',
+       'CAN_DataFrame.CAN_DataFrame.DLC',
+       'CAN_DataFrame.CAN_DataFrame.DataLength',
+       'CAN_DataFrame.CAN_DataFrame.DataBytes',
+       'CAN_DataFrame.CAN_DataFrame.Dir', 'CAN_DataFrame.CAN_DataFrame.EDL',
+       'CAN_DataFrame.CAN_DataFrame.ESI', 'CAN_DataFrame.CAN_DataFrame.BRS'],
+      dtype='object')
