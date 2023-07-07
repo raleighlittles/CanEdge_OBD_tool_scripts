@@ -2,8 +2,6 @@
 
 File : determine_supported_pids.py
 
-Usage: $ python3 determine_supported_pids.py -i <PATH-TO-CANEDGE-MF4-FILE>
-
 """
 
 import pdb
@@ -68,12 +66,12 @@ def get_enabled_pids_from_file(canedge_mf4_filename : str) -> typing.List:
 
                 # Each of the PIDs is split into a group of 32, but the PID numbers on these 32-boundaries
                 # are actually the PIDs for checking which PIDs are enabled -- hence the +1
-                # ie. PID #0 is for which of PIDs 1-31 (inclusive) is available
+                # ie. PID #0 is for which of PIDs 1-32 (inclusive) is available
                 #     PID #32 is for which of PIDs 33-64 is available, and so on
                 #
                 # The multiplication comes from: if you're in the 3rd group of 32-bits, you're
                 # looking at what PIDs from 65 to 96 are available
-                corresponding_pid_num = (1 + pid_idx) + len(bin_sequence) * bin_seq_idx
+                corresponding_pid_num = (1 + pid_idx) + (len(bin_sequence) * bin_seq_idx)
                 #print(f"PID #{corresponding_pid_num} is enabled!")
                 supported_pid_nums.add(corresponding_pid_num)
 
