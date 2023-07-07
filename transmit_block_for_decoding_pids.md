@@ -86,5 +86,17 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "delay": 70,
         "id": "7DF",
         "data": "0201C05555555555"
+      },
+      {
+        "name": "PID_enab_S09",
+        "state": 1,
+        "id_format": 0,
+        "frame_format": 0,
+        "brs": 0,
+        "log": 1,
+        "period": 60000,
+        "delay": 80,
+        "id": "7DF",
+        "data": "0209005555555555"
       }
 ```
