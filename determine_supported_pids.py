@@ -86,4 +86,8 @@ if __name__ == "__main__":
 
     supported_pids = get_enabled_pids_from_file(argparse_args.canedge_mf4_file)
 
-    print(f"Supported pids are: {supported_pids}")
+    print("Supported pids")
+    print("--------------")
+
+    for pid in supported_pids:
+        print(f"{hex(pid)} {int(pid)}d")
