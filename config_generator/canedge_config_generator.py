@@ -16,10 +16,12 @@ PID_DELAYS_FILE = "pid_delays.txt"
 PID_RESPONSE_DATA_FILE = "pid_responses.txt"
 CANEDGE_CANBUS_TRANSMIT_REQ_TYPE = "7DF"
 
-def generate_canedge_config(pid_names : typing.List, pid_periods : typing.List, pid_delays : typing.List, pid_response_data : typing.List):
+
+def generate_canedge_config(pid_names: typing.List, pid_periods: typing.List, pid_delays: typing.List, pid_response_data: typing.List):
     pass
 
-def get_lines_from_file(filename : str) -> typing.List:
+
+def get_lines_from_file(filename: str) -> typing.List:
 
     lines_from_file = list()
 
@@ -37,7 +39,6 @@ if __name__ == "__main__":
     pid_delays = get_lines_from_file(PID_DELAYS_FILE)
     pid_response_data = get_lines_from_file(PID_RESPONSE_DATA_FILE)
 
-
     if not (len(pid_names) == len(pid_periods) == len(pid_delays) == len(pid_response_data)):
         print("[ERROR] Mismatch in size between text files -- can't create config")
         sys.exit(3)
@@ -49,7 +50,7 @@ if __name__ == "__main__":
         for idx in range(0, len(pid_names)):
 
             pid_transmission_obj = dict()
-            
+
             # Most fields are hardcoded from the config. Make sure to load this into the Canedge config
             # tester to verify, before use: https://canlogger.csselectronics.com/simple-editor/
 
@@ -66,7 +67,5 @@ if __name__ == "__main__":
             pid_transmission_obj["data"] = pid_response_data[idx]
 
             transmit_blocks["transmit"].append(pid_transmission_obj)
-
-
 
     print(json.dumps(transmit_blocks))
