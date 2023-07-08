@@ -1,3 +1,4 @@
+# Copied from this section: https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01_-_Show_current_data
 pid_id,pid_name
 0,PIDs supported [$01 - $20]
 1,"Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL), status and number of DTCs, components tests, DTC readiness checks)"

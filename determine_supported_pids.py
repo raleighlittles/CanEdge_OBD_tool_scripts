@@ -8,7 +8,6 @@ import pdb
 import asammdf
 import argparse
 import typing
-import csv
 
 HEXADECIMAL_RADIX = 16
 FORMATTED_PREFIX = "0x"
@@ -107,13 +106,6 @@ if __name__ == "__main__":
 
     # Read through the "master list" of PIDs
     pids_id_and_name = dict()
-
-    with open("all_pids_and_names_from_wikipedia.csv", 'r') as pid_master_list_file:
-        csv_reader = csv.reader(pid_master_list_file)
-        
-        for row in csv_reader:
-            pid_num, pid_name = row
-            pids_id_and_name[pid_num] = pid_name
 
     for pid in supported_pids:
 
