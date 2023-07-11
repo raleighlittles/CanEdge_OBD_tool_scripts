@@ -1,0 +1,23 @@
+- [ ]  VIN decoder? https://www.csselectronics.com/pages/uds-protocol-tutorial-unified-diagnostic-services
+
+
+# Nissan PIDs
+
+## Probably works?
+
+* STEER_ANGLE_RATE
+* wHEEL SPEEDS
+* ESP DISABLED (traction control)
+* Speed MPH
+* Left blinker (rename blinker to be 'turn signal')
+* Right blinker 
+* Gear shifter (P = 1, R = 2, N = 3, D = 4, L = 5) -- double check the others besides 4
+* Door opens
+
+
+## Doesn't work for sure
+
+* SET_ME_X07
+* NEW_SIGNAL_1
+* NEW_SIGNAL_2
+* Counter
