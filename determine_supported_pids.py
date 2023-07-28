@@ -112,4 +112,5 @@ if __name__ == "__main__":
 
     for pid in supported_pids:
 
-        print(f"0x{pid:#0{2}} | {int(pid)}d | {get_pid_name_from_number(pid)}")
+        pid_hex = "0x{:02x}".format(int(pid))
+        print(f"{pid_hex} | {int(pid)}d | {get_pid_name_from_number(pid)}".format(hex(pid)))
