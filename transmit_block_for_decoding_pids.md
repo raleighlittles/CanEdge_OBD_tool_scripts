@@ -4,7 +4,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
 
 ```
 {
-        "name": "PID_enabled_0-32",
+        "name": "S01_PID_enabled_0-32",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -16,7 +16,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201005555555555"
       },
       {
-        "name": "PID_enab_33-64",
+        "name": "S01_PID_enab_33-64",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -28,7 +28,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201205555555555"
       },
       {
-        "name": "PID_enab_65-96",
+        "name": "S01_PID_enab_65-96",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -40,7 +40,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201405555555555"
       },
       {
-        "name": "PID_enabl_97-128",
+        "name": "S01_PID_enabl_97-128",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -52,7 +52,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201605555555555"
       },
       {
-        "name": "PID_enab_129-160",
+        "name": "S01_PID_enab_129-160",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -64,7 +64,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201805555555555"
       },
       {
-        "name": "PID_enab_161-192",
+        "name": "S01_PID_enab_161-192",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -76,7 +76,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201A05555555555"
       },
       {
-        "name": "PID_enab_193-224",
+        "name": "S01_PID_enab_193-224",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -88,7 +88,7 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201C05555555555"
       },
       {
-        "name": "PID_enab_S09",
+        "name": "S05_PIDs_enabled",
         "state": 1,
         "id_format": 0,
         "frame_format": 0,
@@ -96,6 +96,18 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "log": 1,
         "period": 60000,
         "delay": 80,
+        "id": "7DF",
+        "data": "0205005555555555"
+      },
+      {
+        "name": "S09_PIDs_enabled",
+        "state": 1,
+        "id_format": 0,
+        "frame_format": 0,
+        "brs": 0,
+        "log": 1,
+        "period": 60000,
+        "delay": 90,
         "id": "7DF",
         "data": "0209005555555555"
       }
