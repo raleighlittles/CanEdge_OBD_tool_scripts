@@ -119,4 +119,55 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
 
 The block below contains the transactions needed to send UDS messages.
 
-Specifically, the messages currently supported are:
+```
+
+{
+  "name":"ECU_manufacturing_date_via_UDS",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60040,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322F18B55555555"
+},
+{
+  "name":"programming_date_via_UDS",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60050,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322F19955555555"
+},
+{
+  "name":"calibration_date_via_UDS",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60060,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322F19B55555555"
+},
+{
+  "name":"ECU_installation_date_via_UDS",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60070,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322F19D55555555"
+}
+
+```
