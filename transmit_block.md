@@ -1,5 +1,7 @@
 Go to the section of your config.json file that starts with "transmit", and replace the contents of that array with the code below.
 
+Remember that the '55555...' block is the "don't care" value for CanEdge.
+
 This will probe your vehicle's ECU every 60 seconds to see which PIDs it responds to.
 
 ```
@@ -117,10 +119,11 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
 
 > Main article: https://en.wikipedia.org/wiki/Unified_Diagnostic_Services
 
-The block below contains the transactions needed to send UDS messages.
+The block below contains the transactions needed to send UDS messages, using the Service 0x22 (Read Data By Identifier).
+
+for the list of DIDs used, see the `docs` folder.
 
 ```
-
 {
   "name":"ECU_manufacturing_date_via_UDS",
   "state":1,
@@ -132,6 +135,54 @@ The block below contains the transactions needed to send UDS messages.
   "delay":0,
   "id":"7E0",
   "data":"0322F18B55555555"
+},
+{
+  "name":"ECU_serial_number_via_UDS",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60080,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322F18C55555555"
+},
+{
+  "name":"VIN_lookup_example_2_using_UDS",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60090,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322F19055555555"
+},
+{
+  "name":"Flow_control_for_VIN_2",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60100,
+  "delay":10,
+  "id":"7E0",
+  "data":"3000000000000000"
+},
+{
+  "name":"System_or_engine_name_via_UDS",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60110,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322F19755555555"
 },
 {
   "name":"programming_date_via_UDS",
@@ -168,6 +219,17 @@ The block below contains the transactions needed to send UDS messages.
   "delay":0,
   "id":"7E0",
   "data":"0322F19D55555555"
+},
+{
+  "name":"UDS_version_data_identifier",
+  "state":1,
+  "id_format":0,
+  "frame_format":0,
+  "brs":0,
+  "log":1,
+  "period":60120,
+  "delay":0,
+  "id":"7E0",
+  "data":"0322FF0055555555"
 }
-
 ```
