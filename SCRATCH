@@ -5,6 +5,7 @@
 VIN is correctly retrieved from Service 09 PID 2 request:
 
 ```
+timestamps,CAN_DataFrame.CAN_DataFrame.BusChannel,CAN_DataFrame.CAN_DataFrame.ID,CAN_DataFrame.CAN_DataFrame.IDE,CAN_DataFrame.CAN_DataFrame.DLC,CAN_DataFrame.CAN_DataFrame.DataLength,CAN_DataFrame.CAN_DataFrame.DataBytes,CAN_DataFrame.CAN_DataFrame.Dir,CAN_DataFrame.CAN_DataFrame.BusChannel_0,CAN_DataFrame.CAN_DataFrame.ID_0,CAN_DataFrame.CAN_DataFrame.IDE_0,CAN_DataFrame.CAN_DataFrame.DLC_0,CAN_DataFrame.CAN_DataFrame.DataLength_0,CAN_DataFrame.CAN_DataFrame.DataBytes_0,CAN_DataFrame.CAN_DataFrame.Dir_0
 27.52245,1.0,2024,0.0,8,8,[16 20 73  2  1 51 78 49],0.0,1.0,2016,0.0,8,8,[ 2  9  2 85 85 85 85 85],1.0
 27.525100000000002,1.0,352,0.0,7,7,[ 51 131  33   0   8 255 232   0],0.0,1.0,2016,0.0,8,8,[ 2  9  2 85 85 85 85 85],1.0
 27.5253,1.0,384,0.0,8,8,[31 89 50 19 56  0 52 16],0.0,1.0,2016,0.0,8,8,[ 2  9  2 85 85 85 85 85],1.0
@@ -17,6 +18,29 @@ A DBC file to extract the VIN is needed
 ## via UDS
 
 The VIN is also correctly received via UDS, using the Service 0x22 (34d) request "Read Data By Identifier" with Device Identifier 0xF190 (241d 144d)
+
+```
+timestamps,CAN_DataFrame.CAN_DataFrame.BusChannel,CAN_DataFrame.CAN_DataFrame.ID,CAN_DataFrame.CAN_DataFrame.IDE,CAN_DataFrame.CAN_DataFrame.DLC,CAN_DataFrame.CAN_DataFrame.DataLength,CAN_DataFrame.CAN_DataFrame.DataBytes,CAN_DataFrame.CAN_DataFrame.Dir,CAN_DataFrame.CAN_DataFrame.BusChannel_0,CAN_DataFrame.CAN_DataFrame.ID_0,CAN_DataFrame.CAN_DataFrame.IDE_0,CAN_DataFrame.CAN_DataFrame.DLC_0,CAN_DataFrame.CAN_DataFrame.DataLength_0,CAN_DataFrame.CAN_DataFrame.DataBytes_0,CAN_DataFrame.CAN_DataFrame.Dir_0
+27.5312,1.0,734,0.0,8,8,[  0   0 128   9  16   0  13  32],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.531750000000002,1.0,2024,0.0,8,8,[33 67 78 55 65 80 57 74],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.532649999999997,1.0,2024,0.0,8,8,[34 76 56 55 52 50 56 57],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.5353,1.0,658,0.0,8,8,[128 248  27 127 208   0  35   1],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.5355,1.0,352,0.0,7,7,[ 51 131  33   0   8 255 232   0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.53575,1.0,384,0.0,8,8,[31 89 50 19 56  0 53 16],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.536,1.0,386,0.0,8,8,[255   0   0   0   0  21  64 205],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.536250000000003,1.0,505,0.0,8,8,[ 32  30  31  89   0   0   0 128],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.536450000000002,1.0,581,0.0,8,8,[255 224   0  24   0  16 255 225],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.537550000000003,1.0,1508,0.0,3,3,[0 0 0 0 0 0 0 0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.5377,1.0,768,0.0,1,1,[0 0 0 0 0 0 0 0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.537950000000002,1.0,2,0.0,8,8,[213 255   0   7 195 177  92   3],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.538400000000003,1.0,533,0.0,6,6,[255  48 255   4 255 255   0   0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.53875,1.0,368,0.0,3,3,[ 48   1 205   0   0   0   0   0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.538850000000004,1.0,534,0.0,2,2,[64 64  0  0  0  0  0  0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.539099999999998,1.0,372,0.0,8,8,[101  70  84 170  12   0   0   0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.53935,1.0,1573,0.0,6,6,[ 50   0 227  29  16   0   0   0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.53955,1.0,374,0.0,8,8,[  0   0   3 211 131 179 236   8],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+27.5398,1.0,375,0.0,8,8,[254  19  64   0  50   0   0   0],0.0,1.0,2016,0.0,8,8,[  3  34 241 144  85  85  85  85],1.0
+```
 
 # UDS Device Identifiers
 
