@@ -1,0 +1,32 @@
+CM_ "DBC file for 2018 Nissan Versa, created from opendbc and forked";
+
+BO_ 2 STEER_ANGLE_SENSOR: 5 XXX
+ SG_ STEER_ANGLE_RATE : 16|8@1+ (1,0) [0|255] "" XXX
+
+BO_ 644 WHEEL_SPEEDS_FRONT: 8 XXX
+ SG_ WHEEL_SPEED_FRONT_RIGHT : 7|16@0+ (0.005,0) [0|65535] "km/h" XXX
+ SG_ WHEEL_SPEED_FRONT_LEFT : 23|16@0+ (0.005,0) [0|65535] "km/h" XXX
+
+BO_ 645 WHEEL_SPEEDS_REAR: 8 XXX
+ SG_ WHEEL_SPEED_REAR_RIGHT : 7|16@0+ (0.005,0) [0|65535] "km/h" XXX
+ SG_ WHEEL_SPEED_REAR_LEFT : 23|16@0+ (0.005,0) [0|65535] "km/h" XXX
+
+CM_ "https://en.wikipedia.org/wiki/Electronic_stability_control";
+BO_ 852 ELECTRONIC_STABILITY_CONTROL: 8 XXX
+ SG_ STABILITY_CONTROL_DISABLED : 38|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 856 TURN_SIGNALS: 8 XXX
+ SG_ LEFT_TURN_SIGNAL : 17|1@0+ (1,0) [0|1] "" XXX
+ SG_ RIGHT_TURN_SINGAL : 18|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 1549 DOOR_OPEN_LIGHTS: 8 XXX
+ SG_ DOOR_OPEN_FRONT_LEFT : 3|1@0+ (1,0) [0|1] "" XXX
+ SG_ DOOR_OPEN_FRONT_RIGHT : 4|1@0+ (1,0) [0|1] "" XXX
+ SG_ DOOR_OPEN_REAR_LEFT : 5|1@0+ (1,0) [0|1] "" XXX
+ SG_ DOOR_OPEN_REAR_RIGHT : 6|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 1057 TRANSMISSION: 3 XXX
+ SG_ GEAR_SHIFTER : 5|3@0+ (1,0) [0|255] "" XXX
+
+CM_ "https://engineerine.com/why-some-cars-have-b-gear/";
+VAL_ 1057 GEAR_SHIFTER 7 "Braking (Hybrid)" 4 "Drive" 3 "Neutral" 2 "Reverse" 1 "Park" ;
