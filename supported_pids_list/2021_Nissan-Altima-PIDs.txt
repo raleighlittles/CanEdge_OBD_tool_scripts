@@ -1,0 +1,54 @@
+Supported pids
+--------------
+PID num (hex) | PID num (int) | PID Name
+0x80 | 128d | PIDs supported [$81 - $A0]
+0x01 | 1d | Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL), status and number of DTCs, components tests, DTC readiness checks)
+0x03 | 3d | Fuel system status
+0x04 | 4d | Calculated engine load
+0x05 | 5d | Engine coolant temperature
+0x06 | 6d | Short term fuel trim—Bank 1
+0x07 | 7d | Long term fuel trim—Bank 1
+0x0b | 11d | Intake manifold absolute pressure
+0x0c | 12d | Engine speed
+0x0d | 13d | Vehicle speed
+0x0e | 14d | Timing advance
+0x0f | 15d | Intake air temperature
+0x10 | 16d | Mass air flow sensor (MAF) air flow rate
+0x11 | 17d | Throttle position
+0x8e | 142d | Engine Friction - Percent Torque
+0x13 | 19d | Oxygen sensors present (in 2 banks)
+0x15 | 21d | Oxygen Sensor 2 A: Voltage B: Short term fuel trim
+0x1c | 28d | OBD standards this vehicle conforms to
+0x1f | 31d | Run time since engine start
+0x20 | 32d | PIDs supported [$21 - $40]
+0x21 | 33d | Distance traveled with malfunction indicator lamp (MIL) on
+0x24 | 36d | Oxygen Sensor 1 AB: Air-Fuel Equivalence Ratio (lambda,λ) CD: Voltage
+0x2c | 44d | Commanded EGR
+0x2d | 45d | EGR Error
+0x2e | 46d | Commanded evaporative purge
+0x2f | 47d | Fuel Tank Level Input
+0x30 | 48d | Warm-ups since codes cleared
+0x31 | 49d | Distance traveled since codes cleared
+0x32 | 50d | Evap. System Vapor Pressure
+0x33 | 51d | Absolute Barometric Pressure
+0x3c | 60d | Catalyst Temperature: Bank 1, Sensor 1
+0x40 | 64d | PIDs supported [$41 - $60]
+0x41 | 65d | Monitor status this drive cycle
+0x42 | 66d | Control module voltage
+0x43 | 67d | Absolute load value
+0x44 | 68d | Commanded Air-Fuel Equivalence Ratio (lambda,λ)
+0x45 | 69d | Relative throttle position
+0x46 | 70d | Ambient air temperature
+0x47 | 71d | Absolute throttle position B
+0x49 | 73d | Accelerator pedal position D
+0x4a | 74d | Accelerator pedal position E
+0x4c | 76d | Commanded throttle actuator
+0x4d | 77d | Time run with MIL on
+0x51 | 81d | Fuel Type
+0x52 | 82d | Ethanol fuel %
+0x60 | 96d | PIDs supported [$61 - $80]
+0x61 | 97d | Driver's demand engine - percent torque
+0x62 | 98d | Actual engine - percent torque
+0x63 | 99d | Engine reference torque
+0x64 | 100d | Engine percent torque data
+0x6d | 109d | Fuel pressure control system
