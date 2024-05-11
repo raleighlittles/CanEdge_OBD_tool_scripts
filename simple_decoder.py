@@ -67,11 +67,12 @@ if __name__ == "__main__":
     raw_traffic_mdf = mdf.to_dataframe()
 
 
-    freq_counts = get_frequency_counts_of_data(raw_traffic_mdf, ["CAN_DataFrame.CAN_DataFrame.DataBytes", "CAN_DataFrame.CAN_DataFrame.DataBytes_0"])
-    
+    #freq_counts = get_frequency_counts_of_data(raw_traffic_mdf, ["CAN_DataFrame.CAN_DataFrame.DataBytes", "CAN_DataFrame.CAN_DataFrame.DataBytes_0"])
 
-    # extracted_mdf = mdf.extract_bus_logging(
-    #     database_files=can_database_files).to_dataframe()
+    extracted_mdf = mdf.extract_bus_logging(
+        database_files=can_database_files).to_dataframe()
+    
+    pdb.set_trace()
     
     # extracted_mdf.to_csv(input_file + ".csv")
 
