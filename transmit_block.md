@@ -90,6 +90,30 @@ This will probe your vehicle's ECU every 60 seconds to see which PIDs it respond
         "data": "0201C05555555555"
       },
       {
+        "name":"S03_show_stored_DTCs",
+        "state":1,
+        "id_format":0,
+        "frame_format":0,
+        "brs":0,
+        "log":1,
+        "period":60050,
+        "delay":0,
+        "id":"7DF",
+        "data":"0203005555555555"
+      },
+      {
+        "name":"Flow_control_for_stored_DTCs",
+        "state":1,
+        "id_format":0,
+        "frame_format":0,
+        "brs":0,
+        "log":1,
+        "period":60050,
+        "delay":10,
+        "id":"7E0",
+        "data":"3000000000000000"
+      },
+      {
         "name": "S05_PIDs_enabled",
         "state": 1,
         "id_format": 0,
