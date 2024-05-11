@@ -1,6 +1,9 @@
 """
+File : determine_supported_service01_pids.py
 
-File : determine_supported_pids.py
+Determine which of the OBD Service 1 PIDS: https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01_-_Show_current_data
+
+are supported by the vehicle
 
 """
 
