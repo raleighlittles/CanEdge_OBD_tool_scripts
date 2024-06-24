@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 ## Renames all the CanEdge files in a directory to have the date they were created,
 ## plus an optional suffix.
 ## ie. `ABCDEF.MF4` becomes `20010911_<suffix>.MF4`
@@ -15,23 +17,33 @@
 input_dir=$1
 suffix="versa"
 file_ext="MF4"
+output_dir=$2
 
-for dirname in "$input_dir"/LOG; do
+for dirname in "$input_dir"/LOG/*; do
 
-	echo "Scanning for $file_ext files in $dirname"
+	#echo "Scanning for $file_ext files in $dirname"
 
-	for filename in "$input_dir"/"$dirname"/*"$file_ext"; do
+	for subdir in "$dirname"/*; do
 
-		file_modified_date=$(date -r "$filename" "+%Y%m%d%H%M%S")
-		mv -vn "$filename" "$file_modified_date"_"$suffix"."$file_ext"
+		#echo "Scanning subdir $subdir"
+
+		for filename in "$subdir"/*$file_ext; do
+
+			file_modified_date=$(date -r "$filename" "+%Y%m%d%H%M%S")
+			new_filename="$file_modified_date"_"$suffix"."$file_ext"
+			echo "Renaming $filename to '$new_filename'"
+			mv -vn "$filename" "$output_dir"/"$new_filename"
+
+		done
 		
 	done
 
 done
 
-# delete empty directories
-find "$input_dir" -type d -empty -delete
+# delete empty directories and temp files
+find "$input_dir"/LOG -type d -empty -delete
+find "$input_dir"/LOG -type f -iname "*.TMP"
 
 # move to output location
-output_dir=$2
-mv -vn *."$file_ext" "$output_dir"
+
+# mv -vn *."$file_ext" "$output_dir"
