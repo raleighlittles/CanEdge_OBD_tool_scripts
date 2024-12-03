@@ -16,16 +16,22 @@ if __name__ == "__main__":
     if not os.path.exists(argparse_args.output_directory):
         os.makedirs(argparse_args.output_directory, exist_ok=False)
 
-    for filename in os.listdir(argparse_args.input_directory):
-        if filename.lower().endswith(".mf4"):
+    num_files_converted = 0
 
-            mf4_file_path = os.path.join(argparse_args.input_directory, filename)
-            print(f"[DEBUG] Converting {filename} to CSV | File size = {os.path.getsize(mf4_file_path)} bytes")
+    for candidate_filename in os.listdir(argparse_args.input_directory):
+
+        if candidate_filename.lower().endswith(".mf4"):
+
+            mf4_file_path = os.path.join(argparse_args.input_directory, candidate_filename)
+            print(f"[DEBUG] Converting {candidate_filename} to CSV(s) | File size = {os.path.getsize(mf4_file_path)} bytes")
 
             mdf_obj = asammdf.MDF(mf4_file_path, use_display_names=True)
 
-            csv_filename = filename + ".csv"
-            csv_file_path = os.path.join(argparse_args.output_directory, csv_filename)
+            # There will be multiple CSV files created for each MF4; one for each channel
+            csv_file_directory = os.path.join(argparse_args.output_directory, candidate_filename)
+            os.makedirs(csv_file_directory, exist_ok=False)
 
-            mdf_obj.export(fmt="csv", filename=csv_file_path)
+            mdf_obj.export(fmt="csv", filename=os.path.join(csv_file_directory, candidate_filename))
+            num_files_converted += 1
 
+    print(f"Finished converting {num_files_converted} files to CSV")

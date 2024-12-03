@@ -7,7 +7,6 @@ are supported by the vehicle
 
 """
 
-import pdb
 import asammdf
 import argparse
 import typing
